@@ -7,7 +7,9 @@ const alunos = require('./routers/alunosRouter')
 
 app.get('/alunos/todos', alunos.alunos)
 app.get('/moeda/:valor_real', cotacao.cotacao)
-
+app.get('/', (req, res) => {
+    res.send("<p>Carregue alguma rota</p>")
+})
 
 const porta = 3000
 app.listen(porta, () => {
